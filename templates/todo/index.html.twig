@@ -18,6 +18,24 @@
     </ul>
 </div>
 
+{% for message in app.session.flashBag.get('info') %}
+    <div class=" alert alert-info">
+        {{message}}
+    </div>
+{% endfor %}
+
+{% for message in app.session.flashBag.get('succes') %}
+    <div class=" alert alert-succes">
+        {{message}}
+    </div>
+{% endfor %}
+
+{% for message in app.session.flashBag.get('serror') %}
+    <div class=" alert alert-danger">
+        {{message}}
+    </div>
+{% endfor %}
+
     <ol class="list-group">
         {% for name,content in app.session.get('todos') %}
 
