@@ -30,7 +30,7 @@
     </div>
 {% endfor %}
 
-{% for message in app.session.flashBag.get('serror') %}
+{% for message in app.session.flashBag.get('error') %}
     <div class=" alert alert-danger">
         {{message}}
     </div>
